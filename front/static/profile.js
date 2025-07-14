@@ -1,15 +1,15 @@
-// Получаем все нужные данные
+// Get all required elements
 const profileUserName = document.getElementById("profileUserName");
 
-// Ставим юзернейм тексту
+// Set username text
 profileUserName.textContent = localStorage.getItem("username");
 
-// При выходе просто на / перекидывает
+// On logout just redirect to /
 const Exit = async () => 
     { 
         localStorage.setItem("username", "Login to see username!");
         window.location.href = "/";
     }
 
-// Привязываем функцию к кнопке
+// Bind the function to the button
 document.getElementById("exit")?.addEventListener("click", Exit);
